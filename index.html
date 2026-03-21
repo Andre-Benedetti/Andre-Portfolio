@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -8,63 +9,83 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  
   <link href="assets/css/main.css" rel="stylesheet">
-  
+
   <style>
-    /* Custom style to center and round the profile picture */
+    /* Ensures the hero section is visible and centered */
+    .hero {
+      width: 100%;
+      min-height: 100vh;
+      position: relative;
+      padding: 120px 0 60px 0;
+      display: flex;
+      align-items: center;
+      background: #f8f9fa; /* Light background to ensure text visibility */
+    }
     .profile-img-hero {
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      border: 4px solid rgba(255, 255, 255, 0.2);
-      margin-bottom: 25px;
-      object-fit: cover; /* Ensures the image doesn't stretch */
-      box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+      border: 5px solid #fff;
+      margin-bottom: 20px;
+      object-fit: cover;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    }
+    .hero h2 {
+      color: #333;
+      font-size: 48px;
+      font-weight: 700;
+    }
+    .hero p {
+      color: #555;
+      max-width: 800px;
+      margin: 0 auto 30px auto;
+    }
+    .btn-get-started {
+      background: #007bff;
+      color: #fff;
+      padding: 10px 30px;
+      border-radius: 5px;
+      text-decoration: none;
     }
   </style>
 </head>
 
 <body class="index-page">
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
+
+  <header id="header" class="header d-flex align-items-center sticky-top shadow-sm bg-white">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <h1 class="sitename">Andre Benedetti</h1>
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename" style="color: #333; margin: 0;">ANDRE BENEDETTI</h1>
       </a>
       <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
+        <ul class="d-flex list-unstyled m-0">
+          <li><a href="index.html" class="active p-3">Home</a></li>
+          <li><a href="about.html" class="p-3">About</a></li>
+          <li><a href="resume.html" class="p-3">Resume</a></li>
+          <li><a href="portfolio.html" class="p-3">Portfolio</a></li>
+          <li><a href="contact.html" class="p-3">Contact</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
       <div class="header-social-links">
-        <a href="mailto:andbene@gmail.com"><i class="bi bi-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/andrebenedetti/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:andbene@gmail.com" class="p-2"><i class="bi bi-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/andrebenedetti/" class="p-2"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
   </header>
 
   <main class="main">
     <section id="hero" class="hero section">
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
-
-      <div class="container text-center" data-aos="zoom-out" data-aos-delay="100">
+      <div class="container text-center" data-aos="fade-up">
         <div class="row justify-content-center">
           <div class="col-lg-10">
             
-            <img src="assets/img/profile-img.jpg" alt="Andre Benedetti" class="profile-img-hero" data-aos="zoom-in" data-aos-delay="200">
+            <img src="assets/img/profile-img.jpg" alt="Andre Benedetti" class="profile-img-hero">
             
             <h2>Andre Benedetti</h2>
-            <p>Commercial leader and Electrical Engineer with an MBA in Project Management, currently pursuing a Master of Software Engineering at Yoobee College of Creative Innovation Auckland/NZ. Expert at driving revenue growth and managing high-stakes client relationships within the tech and telecom sectors. Transitioning into Software Engineering to bridge the gap between commercial strategy and technical execution.</p>
+            <p>Commercial leader and Electrical Engineer with an MBA in Project Management, currently pursuing a Master of Software Engineering at Yoobee College of Creative Innovation Auckland/NZ. Expert at driving revenue growth and managing high-stakes client relationships within the tech and telecom sectors.</p>
             
-            <div class="d-flex justify-content-center gap-3">
-              <a href="about.html" class="btn-get-started">Full Biography</a>
-              <a href="resume.html" class="btn-get-started" style="background: rgba(255,255,255,0.1);">View Resume</a>
-            </div>
+            <a href="about.html" class="btn-get-started">View Full Profile</a>
             
           </div>
         </div>
@@ -72,14 +93,11 @@
     </section>
   </main>
 
-  <footer id="footer" class="footer light-background">
-    <div class="container text-center">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Andre Benedetti</strong> <span>All Rights Reserved</span></p>
-    </div>
-  </footer>
-
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
 </body>
 </html>
