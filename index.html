@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Andre Luiz Santos Benedetti - Portfolio</title>
+  <title>Andre Benedetti - Home</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Raleway:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
@@ -26,17 +26,16 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
       <div class="header-social-links">
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        <a href="#" class="github"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/andre-luiz-santos-benedetti/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:andre.benedetti@example.com" class="envelope"><i class="bi bi-envelope"></i></a>
       </div>
     </div>
   </header>
@@ -44,117 +43,20 @@
   <main class="main">
 
     <section id="hero" class="hero section">
-      <div class="container text-center">
-        <h2>Andre Luiz Santos Benedetti</h2>
-        <p>Software Engineering Student & Electrical Engineer</p>
-        <a href="#about" class="btn-get-started">Learn More</a>
-      </div>
-    </section>
-
-    <section id="about" class="about section">
       <div class="container">
-        <div class="section-title">
-          <h2>About</h2>
-          <p>Career changer transitioning from Electrical Engineering to Software Engineering, currently pursuing a Master's degree in Auckland.</p>
-        </div>
-        <div class="row gy-4">
-          <div class="col-lg-6 content">
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>022 523 3453</span></li>
-              <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Auckland, NZ</span></li>
-              <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master of Software Engineering</span></li>
-            </ul>
+        <div class="row align-items-center">
+          <div class="col-lg-4 text-center">
+            <img src="assets/img/profile.jpg" alt="Andre Benedetti" class="img-fluid rounded-circle shadow" style="max-width: 300px; border: 5px solid var(--accent-color);">
           </div>
-          <div class="col-lg-6 content">
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>your.email@example.com</span></li>
-              <li><i class="bi bi-chevron-right"></i> <strong>Languages:</strong> <span>English, Portuguese, Spanish</span></li>
-              <li><i class="bi bi-chevron-right"></i> <strong>Interests:</strong> <span>Quantum Computing & Python</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="resume" class="resume section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Master of Software Engineering</h4>
-              <h5>2025 - Present</h5>
-              <p><em>Yoobee College of Creative Innovation, Auckland</em></p>
-              <ul>
-                <li>Research on Quantum Architecture Search and Quantum Algorithms.</li>
-                <li>Full-stack development using Python, Flask, and Django.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>MBA in Project Management</h4>
-              <p><em>Focus on agile methodologies and leadership.</em></p>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Commercial Operations Manager</h4>
-              <h5>2021 - 2025</h5>
-              <p><em>Agilon / MPHRX</em></p>
-              <ul>
-                <li>Strategic management of commercial operations and workflows.</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Electrical Engineer</h4>
-              <p><em>Background in industrial engineering and complex systems.</em></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Contact</h2>
-        </div>
-        <div class="row gy-4">
-          <div class="col-lg-5">
-            <div class="info-wrap">
-              <div class="info-item d-flex">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Location</h3>
-                  <p>Auckland CBD, New Zealand</p>
-                </div>
-              </div>
-              <div class="info-item d-flex">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Phone</h3>
-                  <p>022 523 3453</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-7">
-            <form action="#" method="post" class="php-email-form">
-              <div class="row gy-4">
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                </div>
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-                </div>
-                <div class="col-md-12 text-center">
-                  <button type="submit">Send Message</button>
-                </div>
-              </div>
-            </form>
+          <div class="col-lg-8">
+            <h2 style="margin-top: 20px;">Andre Luiz Santos Benedetti</h2>
+            <p style="font-size: 1.1rem; line-height: 1.6; color: var(--heading-color); text-align: justify;">
+              Commercial leader and Electrical Engineer with an MBA in Project Management, currently 
+              pursuing a Master of Software Engineering at Yoobee College of Creative Innovation – 
+              Auckland/NZ. Transitioning into Software Engineering 
+              to bridge the gap between commercial strategy and technical execution.
+            </p>
+            <a href="resume.html" class="btn-get-started">View My Resume</a>
           </div>
         </div>
       </div>
