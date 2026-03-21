@@ -4,118 +4,176 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Andre Benedetti - Home</title>
+  <title>Andre Luiz Santos Benedetti - Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Raleway:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
-  
-  <style>
-    /* New styles to fix the image and description layout */
-    .hero {
-      width: 100%;
-      min-height: 80vh; /* Adjust height to not cover whole screen */
-      position: relative;
-      padding: 140px 0 60px 0; /* Add top padding to clear the header */
-      background: #f8f9fa; /* Light background for visibility */
-    }
-    
-    .hero .row {
-      display: flex;
-      align-items: center; /* Center image and text vertically */
-    }
-    
-    .profile-img-container {
-      text-align: center; /* Center the image in its column */
-    }
-    
-    .profile-img-rect {
-      width: 100%; /* Image takes full width of the column */
-      max-width: 320px; /* But not wider than this */
-      border-radius: 10px; /* Slight rounded corners for a modern look, not oval */
-      border: 8px solid #fff; /* White frame */
-      box-shadow: 0px 10px 30px rgba(0,0,0,0.1); /* Soft shadow */
-      object-fit: cover; /* Keeps image from stretching */
-    }
-    
-    .hero-text-block {
-      padding-left: 30px; /* Space between photo and text */
-    }
-    
-    .hero h2 {
-      font-size: 42px;
-      font-weight: 700;
-      color: #333;
-      margin-bottom: 15px;
-    }
-    
-    .hero p {
-      color: #555;
-      font-size: 18px;
-      line-height: 1.8;
-      margin-bottom: 30px;
-    }
-    
-    /* Copyright Footer Style */
-    .footer {
-      background: #333; /* Dark background */
-      color: #fff; /* White text */
-      padding: 20px 0;
-      margin-top: 60px;
-    }
-  </style>
+  <link href="main.css" rel="stylesheet">
 </head>
 
-<body class="index-page">
+<body>
 
-  <header id="header" class="header d-flex align-items-center sticky-top shadow-sm bg-white">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <h1 class="sitename" style="color: #333; margin: 0;">ANDRE BENEDETTI</h1>
+  <div id="preloader"></div>
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1>Andre Benedetti</h1>
       </a>
+
       <nav id="navmenu" class="navmenu">
-        <ul class="d-flex list-unstyled m-0">
-          <li><a href="index.html" class="active p-3">Home</a></li>
-          <li><a href="about.html" class="p-3">About</a></li>
-          <li><a href="resume.html" class="p-3">Resume</a></li>
-          <li><a href="portfolio.html" class="p-3">Portfolio</a></li>
-          <li><a href="contact.html" class="p-3">Contact</a></li>
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+
       <div class="header-social-links">
-        <a href="mailto:andbene@gmail.com" class="p-2"><i class="bi bi-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/andrebenedetti/" class="p-2"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="github"><i class="bi bi-github"></i></a>
       </div>
     </div>
   </header>
 
   <main class="main">
+
     <section id="hero" class="hero section">
-      <div class="container" data-aos="fade-up">
-        <div class="row">
-          
-          <div class="col-lg-4 profile-img-container">
-            <img src="assets/img/profile-img.jpg" alt="Andre Benedetti" class="profile-img-rect">
+      <div class="container text-center">
+        <h2>Andre Luiz Santos Benedetti</h2>
+        <p>Software Engineering Student & Electrical Engineer</p>
+        <a href="#about" class="btn-get-started">Learn More</a>
+      </div>
+    </section>
+
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="section-title">
+          <h2>About</h2>
+          <p>Career changer transitioning from Electrical Engineering to Software Engineering, currently pursuing a Master's degree in Auckland.</p>
+        </div>
+        <div class="row gy-4">
+          <div class="col-lg-6 content">
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>022 523 3453</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Auckland, NZ</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master of Software Engineering</span></li>
+            </ul>
           </div>
-          
-          <div class="col-lg-8 hero-text-block">
-            <h2>Andre Benedetti</h2>
-            <p>Commercial leader and Electrical Engineer with an MBA in Project Management, currently pursuing a Master of Software Engineering at Yoobee College of Creative Innovation Auckland/NZ. Transitioning into Software Engineering to bridge the gap between commercial strategy and technical execution.</p>
-            <a href="about.html" class="btn-get-started" style="background: #007bff; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">View Full Profile</a>
+          <div class="col-lg-6 content">
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>your.email@example.com</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Languages:</strong> <span>English, Portuguese, Spanish</span></li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Interests:</strong> <span>Quantum Computing & Python</span></li>
+            </ul>
           </div>
-          
         </div>
       </div>
     </section>
+
+    <section id="resume" class="resume section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Master of Software Engineering</h4>
+              <h5>2025 - Present</h5>
+              <p><em>Yoobee College of Creative Innovation, Auckland</em></p>
+              <ul>
+                <li>Research on Quantum Architecture Search and Quantum Algorithms.</li>
+                <li>Full-stack development using Python, Flask, and Django.</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>MBA in Project Management</h4>
+              <p><em>Focus on agile methodologies and leadership.</em></p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Commercial Operations Manager</h4>
+              <h5>2021 - 2025</h5>
+              <p><em>Agilon / MPHRX</em></p>
+              <ul>
+                <li>Strategic management of commercial operations and workflows.</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Electrical Engineer</h4>
+              <p><em>Background in industrial engineering and complex systems.</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+        <div class="row gy-4">
+          <div class="col-lg-5">
+            <div class="info-wrap">
+              <div class="info-item d-flex">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Location</h3>
+                  <p>Auckland CBD, New Zealand</p>
+                </div>
+              </div>
+              <div class="info-item d-flex">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Phone</h3>
+                  <p>022 523 3453</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <form action="#" method="post" class="php-email-form">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                </div>
+                <div class="col-md-12 text-center">
+                  <button type="submit">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer id="footer" class="footer">
-    <div class="container text-center">
-      <p style="margin: 0;">&copy; <span>Copyright</span> <strong class="px-1 sitename">Andre Benedetti</strong> <span>All Rights Reserved</span></p>
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1">Andre Benedetti</strong> <span>All Rights Reserved</span></p>
+      </div>
     </div>
   </footer>
 
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
 
 </body>
 </html>
