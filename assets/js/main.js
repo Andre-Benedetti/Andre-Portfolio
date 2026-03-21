@@ -1,232 +1,96 @@
-/*--------------------------------------------------------------
-# Global Settings & Variables
---------------------------------------------------------------*/
+/* Variables */
 :root {
-  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --header-bg: #f4f4f4;
+  --btn-black: #000000;
+  --text-light-gray: #e0e0e0; /* Very light gray for nav text */
+  --btn-gray-dark: #333333;   /* Dark gray for Resume button */
   --heading-font: "Raleway", sans-serif;
-  --nav-font: "Poppins", sans-serif;
-
-  /* Color Palette */
-  --background-color: #ffffff;
-  --header-bg: #f4f4f4; /* Light gray for the top bar */
-  --accent-color: #000000; /* Main accent is black */
-  --heading-color: #050d18;
-  --text-color: #272829;
+  --body-font: "Roboto", sans-serif;
 }
 
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
+body { font-family: var(--body-font); color: #272829; background: #fff; }
+
+/* Header Styling */
+.header { 
+  background-color: var(--header-bg); 
+  border-bottom: 2px solid #000; 
+  padding: 15px 0; 
 }
 
-body {
-  color: var(--text-color);
-  font-family: var(--default-font);
-  background-color: var(--background-color);
+.logo { text-decoration: none !important; }
+.logo h1 { 
+  color: #000; 
+  font-weight: 700; 
+  margin: 0; 
+  font-size: 24px; 
+  text-decoration: none !important; 
 }
 
-a {
-  color: var(--accent-color);
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-a:hover {
-  color: #555;
-}
-
-/*--------------------------------------------------------------
-# Header & Navigation (Buttons Side-by-Side)
---------------------------------------------------------------*/
-.header {
-  padding: 15px 0;
-  transition: all 0.5s;
-  z-index: 997;
-}
-
-.navmenu ul {
-  margin: 0;
-  padding: 0;
-  display: flex !important;
-  flex-direction: row !important;
-  gap: 10px;
-  list-style: none;
+/* Nav Buttons Side-by-Side */
+.navmenu ul { 
+  display: flex !important; 
+  flex-direction: row !important; 
+  gap: 10px; 
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
 }
 
 .btn-nav {
-  background-color: #000; /* Black background */
-  color: #fff !important; /* White text */
+  background-color: var(--btn-black);
+  color: var(--text-light-gray) !important;
   padding: 10px 20px;
-  border-radius: 0px; /* Square professional look */
+  border-radius: 0px; /* Rectangular */
   font-weight: 600;
   text-transform: uppercase;
   font-size: 13px;
-  letter-spacing: 0.5px;
+  text-decoration: none !important;
   transition: 0.3s;
-  display: block;
 }
 
-.btn-nav:hover, 
-.btn-nav.active {
-  background-color: #555; /* Dark gray on hover */
+.btn-nav:hover, .btn-nav.active {
+  background-color: #444;
   color: #fff !important;
 }
 
-/* Mobile Adjustments for Buttons */
-@media (max-width: 768px) {
-  .btn-nav {
-    padding: 8px 12px;
-    font-size: 11px;
-  }
-  .navmenu ul {
-    gap: 5px;
-  }
+.header-social-links a { 
+  color: #000; 
+  font-size: 22px; 
+  margin-left: 15px; 
+  text-decoration: none; 
 }
 
-/*--------------------------------------------------------------
-# Hero Section (Home Page)
---------------------------------------------------------------*/
-.hero {
-  width: 100%;
-  padding: 80px 0;
+/* Hero Section */
+.hero { padding: 80px 0; }
+.profile-container {
+  width: 100%; max-width: 320px; height: 420px; 
+  overflow: hidden; border: 4px solid #000; 
+  margin: 0 auto; box-shadow: 10px 10px 0px rgba(0,0,0,0.05);
 }
+.profile-container img { width: 100%; height: 100%; object-fit: cover; }
 
-.hero h2 {
-  margin-bottom: 20px;
-  padding: 0;
-  font-size: 48px;
-  font-weight: 700;
-  color: var(--heading-color);
-  font-family: var(--heading-font);
-}
+.hero h2 { font-size: 40px; font-weight: 700; font-family: var(--heading-font); }
+.hero-text { font-size: 1.15rem; line-height: 1.6; text-align: justify; margin: 20px 0; }
 
-.btn-get-started {
-  background: var(--accent-color);
+/* Dark Gray Resume Button */
+.btn-resume-gray {
+  background-color: var(--btn-gray-dark);
+  color: #fff !important;
   padding: 12px 30px;
-  color: #fff;
-  border-radius: 0px;
-  transition: 0.5s;
   text-transform: uppercase;
   font-weight: 600;
+  text-decoration: none;
   display: inline-block;
+  transition: 0.3s;
 }
+.btn-resume-gray:hover { background-color: #000; }
 
-.btn-get-started:hover {
-  background: #444;
-  color: #fff;
+/* Resume Styling */
+.resume .resume-title { font-size: 26px; font-weight: 700; margin: 20px 0; }
+.resume .resume-item { 
+  padding: 0 0 20px 20px; 
+  border-left: 2px solid #000; 
+  position: relative; 
 }
-
-/*--------------------------------------------------------------
-# Resume Section (Timeline Style)
---------------------------------------------------------------*/
-.resume .resume-title {
-  color: var(--heading-color);
-  font-size: 26px;
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.resume .resume-item {
-  padding: 0 0 20px 20px;
-  margin-top: -2px;
-  border-left: 2px solid #000; /* Vertical timeline line */
-  position: relative;
-}
-
-.resume .resume-item h4 {
-  line-height: 18px;
-  font-size: 18px;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-family: var(--nav-font);
-  color: var(--accent-color);
-  margin-bottom: 10px;
-}
-
-.resume .resume-item h5 {
-  font-size: 16px;
-  background: #f4f4f4;
-  padding: 5px 15px;
-  display: inline-block;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.resume .resume-item::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
-  left: -9px;
-  top: 0;
-  background: #fff;
-  border: 2px solid #000;
-}
-
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background-color: var(--background-color);
-  transition: all 0.6s ease-out;
-}
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid var(--accent-color);
-  border-top-color: #e2e2e2;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1s linear infinite;
-}
-
-@keyframes animate-preloader {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-.footer {
-  padding: 30px 0;
-  font-size: 14px;
-}
-
-/*--------------------------------------------------------------
-# Sections General
---------------------------------------------------------------*/
-.section-title {
-  padding-bottom: 30px;
-}
-
-.section-title h2 {
-  font-size: 32px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  position: relative;
-  color: #173b6c;
-}
-
-.section-title h2::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: var(--accent-color);
-  bottom: 0;
-  left: 0;
-}
+.resume .resume-item h4 { color: #000; font-weight: 700; text-transform: uppercase; }
+.resume .resume-item h5 { background: #f4f4f4; padding: 5px 15px; display: inline-block; }
