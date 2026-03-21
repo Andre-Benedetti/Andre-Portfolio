@@ -8,45 +8,60 @@
   
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
-
+  
   <style>
-    /* Ensures the hero section is visible and centered */
+    /* New styles to fix the image and description layout */
     .hero {
       width: 100%;
-      min-height: 100vh;
+      min-height: 80vh; /* Adjust height to not cover whole screen */
       position: relative;
-      padding: 120px 0 60px 0;
+      padding: 140px 0 60px 0; /* Add top padding to clear the header */
+      background: #f8f9fa; /* Light background for visibility */
+    }
+    
+    .hero .row {
       display: flex;
-      align-items: center;
-      background: #f8f9fa; /* Light background to ensure text visibility */
+      align-items: center; /* Center image and text vertically */
     }
-    .profile-img-hero {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      border: 5px solid #fff;
-      margin-bottom: 20px;
-      object-fit: cover;
-      box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    
+    .profile-img-container {
+      text-align: center; /* Center the image in its column */
     }
+    
+    .profile-img-rect {
+      width: 100%; /* Image takes full width of the column */
+      max-width: 320px; /* But not wider than this */
+      border-radius: 10px; /* Slight rounded corners for a modern look, not oval */
+      border: 8px solid #fff; /* White frame */
+      box-shadow: 0px 10px 30px rgba(0,0,0,0.1); /* Soft shadow */
+      object-fit: cover; /* Keeps image from stretching */
+    }
+    
+    .hero-text-block {
+      padding-left: 30px; /* Space between photo and text */
+    }
+    
     .hero h2 {
-      color: #333;
-      font-size: 48px;
+      font-size: 42px;
       font-weight: 700;
+      color: #333;
+      margin-bottom: 15px;
     }
+    
     .hero p {
       color: #555;
-      max-width: 800px;
-      margin: 0 auto 30px auto;
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 30px;
     }
-    .btn-get-started {
-      background: #007bff;
-      color: #fff;
-      padding: 10px 30px;
-      border-radius: 5px;
-      text-decoration: none;
+    
+    /* Copyright Footer Style */
+    .footer {
+      background: #333; /* Dark background */
+      color: #fff; /* White text */
+      padding: 20px 0;
+      margin-top: 60px;
     }
   </style>
 </head>
@@ -76,28 +91,31 @@
 
   <main class="main">
     <section id="hero" class="hero section">
-      <div class="container text-center" data-aos="fade-up">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            
-            <img src="assets/img/profile-img.jpg" alt="Andre Benedetti" class="profile-img-hero">
-            
-            <h2>Andre Benedetti</h2>
-            <p>Commercial leader and Electrical Engineer with an MBA in Project Management, currently pursuing a Master of Software Engineering at Yoobee College of Creative Innovation Auckland/NZ. Expert at driving revenue growth and managing high-stakes client relationships within the tech and telecom sectors.</p>
-            
-            <a href="about.html" class="btn-get-started">View Full Profile</a>
-            
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          
+          <div class="col-lg-4 profile-img-container">
+            <img src="assets/img/profile-img.jpg" alt="Andre Benedetti" class="profile-img-rect">
           </div>
+          
+          <div class="col-lg-8 hero-text-block">
+            <h2>Andre Benedetti</h2>
+            <p>Commercial leader and Electrical Engineer with an MBA in Project Management, currently pursuing a Master of Software Engineering at Yoobee College of Creative Innovation Auckland/NZ. Expert at driving revenue growth and managing high-stakes client relationships within the tech and telecom sectors. Transitioning into Software Engineering to bridge the gap between commercial strategy and technical execution.</p>
+            <a href="about.html" class="btn-get-started" style="background: #007bff; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">View Full Profile</a>
+          </div>
+          
         </div>
       </div>
     </section>
   </main>
 
+  <footer id="footer" class="footer">
+    <div class="container text-center">
+      <p style="margin: 0;">&copy; <span>Copyright</span> <strong class="px-1 sitename">Andre Benedetti</strong> <span>All Rights Reserved</span></p>
+    </div>
+  </footer>
+
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 
 </body>
 </html>
