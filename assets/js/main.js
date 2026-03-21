@@ -1,96 +1,166 @@
-/* Variables */
+/*--------------------------------------------------------------
+# Google Fonts
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Raleway:wght@700&family=Roboto:wght@400;700&display=swap');
+
+/*--------------------------------------------------------------
+# Global Reset & Variables
+--------------------------------------------------------------*/
 :root {
-  --header-bg: #f4f4f4;
-  --btn-black: #000000;
-  --text-light-gray: #e0e0e0; /* Very light gray for nav text */
-  --btn-gray-dark: #333333;   /* Dark gray for Resume button */
+  --default-font: "Roboto", sans-serif;
   --heading-font: "Raleway", sans-serif;
-  --body-font: "Roboto", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+  
+  /* Primary Colors based on your professional profile */
+  --header-bg: #f4f4f4;         /* Light gray top bar */
+  --nav-btn-bg: #000000;       /* Solid black buttons */
+  --nav-btn-text: #e0e0e0;     /* Light gray text */
+  --nav-btn-hover: #444444;    /* Dark gray hover */
+  --accent-blue: #000000;      /* Solid black for name and icons */
 }
 
-body { font-family: var(--body-font); color: #272829; background: #fff; }
-
-/* Header Styling */
-.header { 
-  background-color: var(--header-bg); 
-  border-bottom: 2px solid #000; 
-  padding: 15px 0; 
+body {
+  margin: 0;
+  font-family: var(--default-font);
+  background-color: #ffffff;
+  color: #333;
 }
 
-.logo { text-decoration: none !important; }
-.logo h1 { 
-  color: #000; 
-  font-weight: 700; 
-  margin: 0; 
-  font-size: 24px; 
-  text-decoration: none !important; 
+/*--------------------------------------------------------------
+# Header & Navigation (Fixed to match your screenshots)
+--------------------------------------------------------------*/
+.header {
+  background-color: var(--header-bg) !important;
+  border-bottom: 2px solid #000 !important;
+  padding: 15px 0;
+  width: 100%;
 }
 
-/* Nav Buttons Side-by-Side */
-.navmenu ul { 
-  display: flex !important; 
-  flex-direction: row !important; 
-  gap: 10px; 
-  list-style: none; 
-  margin: 0; 
-  padding: 0; 
+.header .logo h1 {
+  margin: 0;
+  font-family: var(--heading-font);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent-blue) !important;
+  text-decoration: underline;
 }
 
-.btn-nav {
-  background-color: var(--btn-black);
-  color: var(--text-light-gray) !important;
-  padding: 10px 20px;
-  border-radius: 0px; /* Rectangular */
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 13px;
+/* Navigation Buttons Styling */
+.navmenu ul {
+  display: flex !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 10px;
+}
+
+.navmenu a {
+  display: block !important;
+  background: var(--nav-btn-bg) !important;
+  color: var(--nav-btn-text) !important;
+  padding: 10px 20px !important;
   text-decoration: none !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  font-size: 13px !important;
+  border-radius: 0 !important; /* Forces rectangular shape */
   transition: 0.3s;
 }
 
-.btn-nav:hover, .btn-nav.active {
-  background-color: #444;
-  color: #fff !important;
+.navmenu a:hover, 
+.navmenu .active {
+  background: var(--nav-btn-hover) !important;
+  color: #ffffff !important;
 }
 
-.header-social-links a { 
-  color: #000; 
-  font-size: 22px; 
-  margin-left: 15px; 
-  text-decoration: none; 
-}
-
-/* Hero Section */
-.hero { padding: 80px 0; }
-.profile-container {
-  width: 100%; max-width: 320px; height: 420px; 
-  overflow: hidden; border: 4px solid #000; 
-  margin: 0 auto; box-shadow: 10px 10px 0px rgba(0,0,0,0.05);
-}
-.profile-container img { width: 100%; height: 100%; object-fit: cover; }
-
-.hero h2 { font-size: 40px; font-weight: 700; font-family: var(--heading-font); }
-.hero-text { font-size: 1.15rem; line-height: 1.6; text-align: justify; margin: 20px 0; }
-
-/* Dark Gray Resume Button */
-.btn-resume-gray {
-  background-color: var(--btn-gray-dark);
-  color: #fff !important;
-  padding: 12px 30px;
-  text-transform: uppercase;
-  font-weight: 600;
+/* Header Social Links */
+.header-social-links a {
+  color: var(--accent-blue) !important;
+  font-size: 22px;
   text-decoration: none;
-  display: inline-block;
   transition: 0.3s;
 }
-.btn-resume-gray:hover { background-color: #000; }
 
-/* Resume Styling */
-.resume .resume-title { font-size: 26px; font-weight: 700; margin: 20px 0; }
-.resume .resume-item { 
-  padding: 0 0 20px 20px; 
-  border-left: 2px solid #000; 
-  position: relative; 
+.header-social-links a:hover {
+  opacity: 0.7;
 }
-.resume .resume-item h4 { color: #000; font-weight: 700; text-transform: uppercase; }
-.resume .resume-item h5 { background: #f4f4f4; padding: 5px 15px; display: inline-block; }
+
+/*--------------------------------------------------------------
+# Main Content & Layout
+--------------------------------------------------------------*/
+.main-content {
+  padding: 60px 0;
+}
+
+h2 {
+  font-family: var(--heading-font);
+  color: #000;
+}
+
+p {
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Profile Image Frame */
+.profile-frame {
+  border: 4px solid #000;
+  overflow: hidden;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.profile-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Action Buttons (e.g., View My Resume) */
+.btn-action {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.btn-action:hover {
+  background: #000;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Resume Timeline (For your Resume page)
+--------------------------------------------------------------*/
+.resume-item {
+  padding: 0 0 20px 20px;
+  border-left: 2px solid #000;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.resume-item::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #000;
+  left: -7px;
+  top: 5px;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+  padding: 40px 0;
+  text-align: center;
+  font-size: 14px;
+  background: #fff;
+}

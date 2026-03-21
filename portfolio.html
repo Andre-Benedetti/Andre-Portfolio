@@ -1,52 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Portfolio - Andre Benedetti</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Raleway:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
   <link href="main.css" rel="stylesheet">
 </head>
-
 <body>
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <h1>Andre Benedetti</h1>
-      </a>
-      <nav id="navmenu" class="navmenu">
-        <ul>
+<header>
+  <div class="header-container">
+    <div class="header-left">
+      <a href="index.html" class="brand-name">Andre Benedetti</a>
+    </div>
+
+    <div class="header-center">
+      <nav>
+        <ul class="nav-menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="resume.html">Resume</a></li>
-          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-      <div class="header-social-links">
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        <a href="mailto:email@example.com" class="envelope"><i class="bi bi-envelope"></i></a>
+    </div>
+
+    <div class="header-right">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/andre-luiz-santos-benedetti/" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:andbene@gmail.com"><i class="bi bi-envelope"></i></a>
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main class="main">
-    <section id="portfolio" class="portfolio section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Upcoming projects in Software Engineering and Quantum Computing.</p>
+<main class="container py-5">
+  <div class="row mb-5 pb-3 border-bottom">
+    <div class="col-12">
+      <h2 class="text-uppercase fw-bold m-0">Portfolio</h2>
+    </div>
+  </div>
+
+  <div class="project-card bg-white border border-2 mb-5 shadow-sm">
+    <div class="row g-0">
+      
+      <div class="col-lg-7 p-4 p-md-5">
+        <h3 class="fw-bold text-uppercase mb-3">Yoobee Car Rental System</h3>
+        
+        <p class="text-justify mb-4">
+          Developed as the core project for the <strong>Professional Software Engineering (MSE800)</strong> course. This Python-based application automates vehicle rental operations, managing everything from inventory to role-based user access.
+        </p>
+
+        <div class="mb-4">
+          <h5 class="fw-bold text-uppercase small border-bottom pb-2 mb-3">Tools & Technologies</h5>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge bg-dark rounded-0 px-3 py-2">Python</span>
+            <span class="badge bg-dark rounded-0 px-3 py-2">VS Code</span>
+            <span class="badge bg-dark rounded-0 px-3 py-2">Miro</span>
+            <span class="badge bg-dark rounded-0 px-3 py-2">GitHub</span>
+            <span class="badge bg-dark rounded-0 px-3 py-2">SQL Integration</span>
+          </div>
         </div>
-        <div class="row text-center">
-          <p><em>Section under development. Projects coming soon.</em></p>
+
+        <div class="mb-4">
+          <h5 class="fw-bold text-uppercase small border-bottom pb-2 mb-3">OOP & Architecture</h5>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><i class="bi bi-cpu me-2"></i><strong>Singleton Pattern:</strong> Ensures a single data instance for consistency.</li>
+            <li class="mb-2"><i class="bi bi-layers me-2"></i><strong>Layered Design:</strong> Separation of Data, Domain, and Application layers.</li>
+            <li><i class="bi bi-shield-lock me-2"></i><strong>Encapsulation:</strong> Secured internal states for Users and Vehicles.</li>
+          </ul>
+        </div>
+
+        <p class="text-muted small italic m-0">
+          * Source code and full documentation are available upon request.
+        </p>
+      </div>
+
+      <div class="col-lg-5 bg-light p-4 border-start-lg">
+        <h5 class="fw-bold text-uppercase small text-center mb-4">Images</h5>
+        <div class="row g-3">
+          
+          <div class="col-12">
+            <div class="bg-white border p-2 shadow-sm text-center">
+              <a href="assets/img/P1 Use Case Diagram.jpg" target="_blank">
+                <img src="assets/img/P1 Use Case Diagram.jpg" class="img-fluid" alt="Use Case Diagram" style="cursor: zoom-in; max-height: 50px;">
+              </a>
+              <p class="mt-2 mb-0 small text-muted font-monospace text-uppercase">Use Case Diagram</p>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="bg-white border p-2 shadow-sm text-center">
+              <a href="assets/img/P1 UML Class Diagram.jpg" target="_blank">
+                <img src="assets/img/P1 UML Class Diagram.jpg" class="img-fluid" alt="UML Class Diagram" style="cursor: zoom-in; max-height: 50px;">
+              </a>
+              <p class="mt-2 mb-0 small text-muted font-monospace text-uppercase">Class Diagram</p>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="bg-white border p-2 shadow-sm text-center">
+              <a href="assets/img/P1 Sequence Diagram.jpg" target="_blank">
+                <img src="assets/img/P1 Sequence Diagram.jpg" class="img-fluid" alt="Sequence Diagram" style="cursor: zoom-in; max-height: 50px;">
+              </a>
+              <p class="mt-2 mb-0 small text-muted font-monospace text-uppercase">Sequence Diagram</p>
+            </div>
+          </div>
+
         </div>
       </div>
-    </section>
-  </main>
 
-  <script src="main.js"></script>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-light border-top py-4 text-center">
+  <div class="container">
+    <p class="m-0 text-dark" style="font-size: 14px;">© Copyright <strong>Andre Benedetti</strong>. All Rights Reserved</p>
+  </div>
+</footer>
+
 </body>
 </html>
