@@ -10,8 +10,8 @@ Professional portfolio showcasing the transition from a background in **Electric
 - Bridging the gap between commercial strategy and technical execution.
 
 ## Technical Skills
-- **Languages / Web:** Python (Flask, Django), JavaScript, SQL / Azure SQL.
-- **Cloud & Delivery:** Azure App Service, Easy Auth, GitHub Actions.
+- **Languages / Web:** Python (Flask, Django), TypeScript/JavaScript (React, React Native, Expo), SQL / Azure SQL.
+- **Cloud & Delivery:** Azure App Service, Supabase, Vercel, GitHub Actions.
 - **Tools:** Cursor, GitHub, VS Code, Docker.
 - **Data / ML:** pandas, scikit-learn, seaborn.
 - **Specialized:** Quantum Computing (Qiskit), introductory quantum algorithms.
@@ -22,6 +22,8 @@ Professional portfolio showcasing the transition from a background in **Electric
 ### Park Tower Booking
 *Internal full-stack Flask tool for Crockers staff managing Park Tower short stays (availability, pipeline, cleaning, conflicts) on Azure.*
 
+### Gati Sync
+*Production MVP for bus operations reporting (Expo/React Native + Supabase + Vercel). Demo: https://gatisync.vercel.app*
 ### Yoobee Car Rental System
 *Python OOP rental system built for MSE-800 (Professional Software Engineering).*
 
