@@ -5,7 +5,7 @@ from pathlib import Path
 
 from fpdf import FPDF
 
-OUT = Path(__file__).resolve().parents[1] / "assets" / "pdf" / "cv.pdf"
+OUT = Path(__file__).resolve().parents[1] / "assets" / "pdf" / "Andre Benedetti CV.pdf"
 FONT_REG = "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"
 FONT_BOLD = "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"
 FONT_ITALIC = "/usr/share/fonts/truetype/liberation/LiberationSans-Italic.ttf"
@@ -20,47 +20,62 @@ class CV(FPDF):
         self.add_font("Body", "B", FONT_BOLD)
         self.add_font("Body", "I", FONT_ITALIC)
         self.add_font("Body", "BI", FONT_BI)
-        self.set_margins(16, 14, 16)
+        self.set_margins(16, 12, 16)
 
     def section(self, title: str):
-        self.ln(2.5)
+        self.ln(2.0)
         self.set_font("Body", "BI", 11)
         self.set_text_color(0, 0, 0)
-        self.cell(0, 6, title, new_x="LMARGIN", new_y="NEXT")
+        self.set_x(self.l_margin)
+        self.cell(0, 5.5, title, new_x="LMARGIN", new_y="NEXT")
         self.set_draw_color(0, 0, 0)
         self.set_line_width(0.3)
         y = self.get_y()
         self.line(self.l_margin, y, self.w - self.r_margin, y)
-        self.ln(2.5)
+        self.ln(2.0)
 
-    def body(self, text: str, size=9.5, style=""):
+    def body(self, text: str, size=9.4, style=""):
         self.set_font("Body", style, size)
         self.set_x(self.l_margin)
-        self.multi_cell(self.epw, 4.2, text)
+        self.multi_cell(self.epw, 4.1, text)
 
     def job_header(self, company: str, dates: str, title: str):
+        """Company and role in bold; dates in italic."""
         self.set_x(self.l_margin)
-        self.set_font("Body", "BI", 9.5)
-        self.write(4.4, company)
-        self.set_font("Body", "I", 9.5)
-        self.write(4.4, f" ({dates}) ")
         self.set_font("Body", "B", 9.5)
-        self.write(4.4, title)
+        self.write(4.3, company)
+        self.set_font("Body", "I", 9.5)
+        self.write(4.3, f" ({dates}) ")
+        self.set_font("Body", "B", 9.5)
+        self.write(4.3, title)
         self.ln(5.0)
 
     def bullet(self, text: str, style="I"):
         self.set_x(self.l_margin)
         bullet_w = 4
-        self.set_font("Body", "", 9.5)
-        self.cell(bullet_w, 4.2, chr(8226))
-        self.set_font("Body", style, 9.5)
-        self.multi_cell(self.epw - bullet_w, 4.2, text)
+        self.set_font("Body", "", 9.3)
+        self.cell(bullet_w, 4.1, chr(8226))
+        self.set_font("Body", style, 9.3)
+        self.multi_cell(self.epw - bullet_w, 4.1, text)
 
-    def one_liner(self, text: str):
+    def one_liner_job(self, company: str, title: str, dates: str | None = None):
+        """Company and title bold; optional dates italic."""
         self.set_x(self.l_margin)
-        self.set_font("Body", "I", 9.3)
-        self.multi_cell(self.epw, 4.1, text)
-        self.ln(0.4)
+        self.set_font("Body", "B", 9.3)
+        self.write(4.1, company)
+        if dates:
+            self.set_font("Body", "I", 9.3)
+            self.write(4.1, f" ({dates}) ")
+        else:
+            self.set_font("Body", "B", 9.3)
+            self.write(4.1, " — ")
+        self.set_font("Body", "B", 9.3)
+        if dates:
+            self.write(4.1, title)
+        else:
+            # Format: Company — Title (dates) when dates embedded in title string
+            self.write(4.1, title)
+        self.ln(4.6)
 
 
 def build():
@@ -69,42 +84,42 @@ def build():
 
     # Header
     pdf.set_font("Body", "BI", 14)
-    pdf.cell(0, 7, "Andre Luiz Santos Benedetti", new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(0, 6.5, "Andre Luiz Santos Benedetti", new_x="LMARGIN", new_y="NEXT")
     pdf.set_font("Body", "I", 10)
-    pdf.cell(0, 4.5, "Mobile Phone: +64 22 523 3453", new_x="LMARGIN", new_y="NEXT")
-    pdf.cell(0, 4.5, "E-mail: andbene@gmail.com", new_x="LMARGIN", new_y="NEXT")
-    pdf.cell(0, 4.5, "Auckland CBD", new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(0, 4.3, "Mobile Phone: +64 22 523 3453", new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(0, 4.3, "E-mail: andbene@gmail.com", new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(0, 4.3, "Auckland CBD", new_x="LMARGIN", new_y="NEXT")
 
     pdf.section("EXECUTIVE SUMMARY")
     pdf.body(
-        "Developer Intern and Electrical Engineer with an MBA in Project Management, "
-        "pursuing a Master of Software Engineering at Yoobee College of Creative Innovation "
-        "(Auckland, NZ). Recently delivered Park Tower Booking for Crockers Property Group—an "
-        "internal full-stack Flask application on Azure. Combines commercial leadership "
-        "experience in tech and telecom with hands-on software delivery to bridge strategy "
-        "and technical execution.",
+        "Commercial leader and Electrical Engineer with an MBA in Project Management, currently "
+        "pursuing a Master of Software Engineering at Yoobee College of Creative Innovation – "
+        "Auckland/NZ. Expert at driving revenue growth and managing high-stakes client "
+        "relationships within the tech and telecom sectors. Transitioning into Software Engineering "
+        "to bridge the gap between commercial strategy and technical execution—most recently as "
+        "Developer Intern at Crockers Property Group, delivering Park Tower Booking (Flask on Azure) "
+        "with Cursor.",
         style="I",
     )
 
     pdf.section("KEY SKILLS & COMPETENCIES")
-    # Two-column-ish via compact bullets
-    skills_left = [
+    skills = [
         "Technologies: Python, Flask, JavaScript, SQL Server / Azure SQL, REST APIs, Azure App Service, GitHub Actions, Cursor",
         "Project Lifecycle Management",
         "Stakeholder Alignment",
         "Software Development & Systems Thinking",
         "Electrical Engineering",
-    ]
-    skills_right_extra = [
         "Commercial Negotiation & Client Relations",
         "Revenue Forecasting",
         "Salesforce / CRM",
         "Confident communication (Fluent English & Portuguese; capable Spanish)",
     ]
-    for s in skills_left + skills_right_extra:
+    for s in skills:
         pdf.bullet(s, style="")
 
     pdf.section("PROFESSIONAL EXPERIENCE")
+
+    gap = 3.5  # blank space after each experience block
 
     pdf.job_header(
         "Crockers Property Group",
@@ -117,8 +132,8 @@ def build():
         "Used Cursor as the primary AI-assisted development environment across UI, backend, data layer, and deployment workflows.",
     ]:
         pdf.bullet(b)
+    pdf.ln(gap)
 
-    pdf.ln(1.2)
     pdf.job_header(
         "agilon Health – Mphrx",
         "June 2021 – March 2025",
@@ -131,8 +146,8 @@ def build():
         "Client Implementation Project Management: Led solution implementations from scope and planning through delivery and handover.",
     ]:
         pdf.bullet(b)
+    pdf.ln(gap)
 
-    pdf.ln(1.2)
     pdf.job_header(
         "China Telecom",
         "November 2020 – May 2021",
@@ -144,8 +159,8 @@ def build():
         "Acted as primary business stakeholder for Salesforce CRM updates to improve pipeline accuracy and management reporting (Digital BA).",
     ]:
         pdf.bullet(b)
+    pdf.ln(gap)
 
-    pdf.ln(1.2)
     pdf.job_header(
         "CenturyLink",
         "January 2019 – September 2020",
@@ -157,34 +172,90 @@ def build():
         "Managed contract complexity and documentation to maximize conversion rates.",
     ]:
         pdf.bullet(b)
+    pdf.ln(gap)
 
-    # NTT without bullets to save space (per user request)
-    pdf.ln(1.0)
-    pdf.one_liner(
-        "NTT (April 2016 – April 2017) — Large Accounts Executive"
-    )
-    pdf.one_liner(
-        "Teltac (June 2015 – September 2015) — Country and Account Manager"
-    )
-    pdf.one_liner(
-        "GVT — Senior Business Manager (June 2013 – June 2015)"
-    )
-    pdf.one_liner(
-        "Matrix Internet S/A — Country and Account Manager (August 2009 – June 2013)"
-    )
-    pdf.one_liner(
-        "Engeforma Engenharia Industria e Comercio LTDA — Electrical Engineer and Contract Management (May 2011 – September 2011)"
-    )
-    pdf.one_liner(
-        "LSX Engenharia LTDA — Electrical Engineer and Contract Management (September 2009 – March 2011)"
-    )
-    pdf.one_liner(
-        "Directo – Computer-Tel Inc. — Country and Account Manager (January 2007 – June 2009)"
-    )
-    pdf.one_liner(
-        "Telenova Comunicações LTDA. — Commercial Manager and Routing Supervisor (April 2005 – December 2006); "
-        "Routing Analyst (January 2005 – May 2005); Trainee (March 2004 – December 2004)"
-    )
+    # Condensed earlier roles — company + title bold
+    pdf.set_x(pdf.l_margin)
+    pdf.set_font("Body", "B", 9.3)
+    pdf.write(4.1, "NTT")
+    pdf.set_font("Body", "I", 9.3)
+    pdf.write(4.1, " (April 2016 – April 2017) ")
+    pdf.set_font("Body", "B", 9.3)
+    pdf.write(4.1, "Large Accounts Executive")
+    pdf.ln(5.5)
+
+    pdf.set_x(pdf.l_margin)
+    pdf.set_font("Body", "B", 9.3)
+    pdf.write(4.1, "Teltac")
+    pdf.set_font("Body", "I", 9.3)
+    pdf.write(4.1, " (June 2015 – September 2015) ")
+    pdf.set_font("Body", "B", 9.3)
+    pdf.write(4.1, "Country and Account Manager")
+    pdf.ln(5.5)
+
+    pdf.set_x(pdf.l_margin)
+    pdf.set_font("Body", "B", 9.3)
+    pdf.write(4.1, "GVT")
+    pdf.set_font("Body", "I", 9.3)
+    pdf.write(4.1, " (June 2013 – June 2015) ")
+    pdf.set_font("Body", "B", 9.3)
+    pdf.write(4.1, "Senior Business Manager")
+    pdf.ln(5.5)
+
+    pdf.set_x(pdf.l_margin)
+    pdf.set_font("Body", "B", 9.3)
+    pdf.write(4.1, "Matrix Internet S/A")
+    pdf.set_font("Body", "I", 9.3)
+    pdf.write(4.1, " (August 2009 – June 2013) ")
+    pdf.set_font("Body", "B", 9.3)
+    pdf.write(4.1, "Country and Account Manager")
+    pdf.ln(5.5)
+
+    pdf.set_x(pdf.l_margin)
+    pdf.set_font("Body", "B", 9.3)
+    pdf.write(4.1, "Engeforma Engenharia Industria e Comercio LTDA")
+    pdf.set_font("Body", "I", 9.3)
+    pdf.write(4.1, " (May 2011 – September 2011) ")
+    pdf.set_font("Body", "B", 9.3)
+    pdf.write(4.1, "Electrical Engineer and Contract Management")
+    pdf.ln(5.5)
+
+    pdf.set_x(pdf.l_margin)
+    pdf.set_font("Body", "B", 9.3)
+    pdf.write(4.1, "LSX Engenharia LTDA")
+    pdf.set_font("Body", "I", 9.3)
+    pdf.write(4.1, " (September 2009 – March 2011) ")
+    pdf.set_font("Body", "B", 9.3)
+    pdf.write(4.1, "Electrical Engineer and Contract Management")
+    pdf.ln(5.5)
+
+    pdf.set_x(pdf.l_margin)
+    pdf.set_font("Body", "B", 9.3)
+    pdf.write(4.1, "Directo – Computer-Tel Inc.")
+    pdf.set_font("Body", "I", 9.3)
+    pdf.write(4.1, " (January 2007 – June 2009) ")
+    pdf.set_font("Body", "B", 9.3)
+    pdf.write(4.1, "Country and Account Manager")
+    pdf.ln(5.5)
+
+    pdf.set_x(pdf.l_margin)
+    pdf.set_font("Body", "B", 9.3)
+    pdf.write(4.1, "Telenova Comunicações LTDA.")
+    pdf.set_font("Body", "I", 9.3)
+    pdf.write(4.1, " (April 2005 – December 2006) ")
+    pdf.set_font("Body", "B", 9.3)
+    pdf.write(4.1, "Commercial Manager and Routing Supervisor")
+    pdf.set_font("Body", "I", 9.3)
+    pdf.write(4.1, "; ")
+    pdf.set_font("Body", "B", 9.3)
+    pdf.write(4.1, "Routing Analyst")
+    pdf.set_font("Body", "I", 9.3)
+    pdf.write(4.1, " (January 2005 – May 2005); ")
+    pdf.set_font("Body", "B", 9.3)
+    pdf.write(4.1, "Trainee")
+    pdf.set_font("Body", "I", 9.3)
+    pdf.write(4.1, " (March 2004 – December 2004)")
+    pdf.ln(4.0)
 
     pdf.section("EDUCATION")
     edu = [
