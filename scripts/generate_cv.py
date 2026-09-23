@@ -92,13 +92,12 @@ def build():
 
     pdf.section("EXECUTIVE SUMMARY")
     pdf.body(
-        "Commercial leader and Electrical Engineer with an MBA in Project Management, currently "
-        "pursuing a Master of Software Engineering at Yoobee College of Creative Innovation – "
-        "Auckland/NZ. Expert at driving revenue growth and managing high-stakes client "
-        "relationships within the tech and telecom sectors. Transitioning into Software Engineering "
-        "to bridge the gap between commercial strategy and technical execution—most recently as "
-        "Developer Intern at Crockers Property Group, delivering Park Tower Booking (Flask on Azure) "
-        "with Cursor.",
+        "Transitioning into technology to bridge business operations and technical delivery. "
+        "Electrical Engineer with an MBA in Project Management and experience leading operational, "
+        "implementation, and contract-management work in technical environments; currently pursuing "
+        "a Master of Software Engineering at Yoobee College of Creative Innovation (Auckland, NZ). "
+        "Most recently Developer Intern at Crockers Property Group, delivering Park Tower Booking—"
+        "a full-stack Flask application on Azure—built with Cursor.",
         style="I",
     )
 
@@ -154,9 +153,10 @@ def build():
         "Senior Account Manager",
     )
     for b in [
-        "Used market data and customer feedback to identify process gaps and digital service improvements (Discovery & Market Analysis).",
-        "Monitored digital service usage and performance metrics to inform CX and quality enhancements.",
-        "Acted as primary business stakeholder for Salesforce CRM updates to improve pipeline accuracy and management reporting (Digital BA).",
+        "Lead identification: Used market data to find and qualify high-value commercial opportunities.",
+        "Account prospecting: Built and advanced target-account pipelines through outbound outreach.",
+        "Full sales cycle: Managed conversion from first contact to signature and technical implementation.",
+        "CRM management: Maintained Salesforce records for pipeline integrity, forecasting, and management reporting.",
     ]:
         pdf.bullet(b)
     pdf.ln(gap)
