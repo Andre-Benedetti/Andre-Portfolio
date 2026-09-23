@@ -4,7 +4,7 @@ Professional portfolio showcasing the transition from a background in **Electric
 
 ## About Me
 - Currently pursuing a **Master of Software Engineering** at Yoobee College of Creative Innovation.
-- **Full Stack Developer (Internship)** at Crockers Property Group (Park Tower Booking).
+- **Developer Intern** at Crockers Property Group (Jul–Nov 2026; Park Tower Booking, built with Cursor).
 - **Electrical Engineer** with an **MBA in Project Management**.
 - Visa Status: Valid until March 31, 2027 (Open for work opportunities in NZ).
 - Bridging the gap between commercial strategy and technical execution.
@@ -12,6 +12,7 @@ Professional portfolio showcasing the transition from a background in **Electric
 ## Technical Skills
 - **Languages / Web:** Python (Flask, Django), JavaScript, SQL / Azure SQL.
 - **Cloud & Delivery:** Azure App Service, Easy Auth, GitHub Actions.
+- **Tools:** Cursor, GitHub, VS Code, Docker.
 - **Data / ML:** pandas, scikit-learn, seaborn.
 - **Specialized:** Quantum Computing (Qiskit), introductory quantum algorithms.
 - **Commercial:** Salesforce CRM, Revenue Forecasting, Project Lifecycle Management.
@@ -37,7 +38,7 @@ Professional portfolio showcasing the transition from a background in **Electric
 *Qiskit circuits, linear algebra foundations, and Deutsch–Jozsa (MSE-802).*
 
 ## Professional Experience
-- **Crockers Property Group** | Full Stack Developer — Internship (2026 - Present).
+- **Crockers Property Group** | Developer Intern (Jul 2026 - Nov 2026).
 - **agilon Health** | Sales Operations and Operational Manager (2021 - 2025).
 - **China Telecom** | Senior Account Manager (2020 - 2021).
 - **CenturyLink** | Senior Account Manager (2019 - 2020).
