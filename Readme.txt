@@ -10,8 +10,8 @@ Professional portfolio showcasing the transition from a background in **Electric
 - Bridging the gap between commercial strategy and technical execution.
 
 ## Technical Skills
-- **Languages / Web:** Python (Flask, Django), TypeScript/JavaScript (React, React Native, Expo), SQL / Azure SQL.
-- **Cloud & Delivery:** Azure App Service, Supabase, Vercel, GitHub Actions.
+- **Languages / Web:** Python (Flask, Django), TypeScript/JavaScript (React, React Native, Expo, Node.js/Express), SQL / Azure SQL / MongoDB.
+- **Cloud & Delivery:** Azure App Service, Supabase, Vercel, Render, GitHub Actions.
 - **Tools:** Cursor, GitHub, VS Code, Docker.
 - **Data / ML:** pandas, scikit-learn, seaborn.
 - **Specialized:** Quantum Computing (Qiskit), introductory quantum algorithms.
@@ -24,6 +24,10 @@ Professional portfolio showcasing the transition from a background in **Electric
 
 ### Gati Sync
 *Production MVP for bus operations reporting (Expo/React Native + Supabase + Vercel). Demo: https://gatisync.vercel.app*
+
+### WhānauWell
+*MSE-800 team project — multi-tenant community wellbeing platform. Backend Developer (Node.js/Express, MongoDB, JWT). Live: https://whanauwell.onrender.com/*
+
 ### Yoobee Car Rental System
 *Python OOP rental system built for MSE-800 (Professional Software Engineering).*
 
