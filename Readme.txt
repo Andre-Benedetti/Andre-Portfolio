@@ -2,38 +2,50 @@
 
 Professional portfolio showcasing the transition from a background in **Electrical Engineering** and **Commercial Leadership** to **Software Engineering**. Currently based in Auckland, New Zealand.
 
-## 🚀 About Me
-- [cite_start]🎓 Currently pursuing a **Master of Software Engineering** at Yoobee College of Creative Innovation[cite: 4, 50].
-- [cite_start]⚡ **Electrical Engineer** with an **MBA in Project Management**[cite: 52, 53].
-- 🌍 **Visa Status:** Valid until March 31, 2027 (Open for work opportunities in NZ).
-- [cite_start]💡 Expert in driving revenue growth and managing high-stakes client relationships within tech and telecom[cite: 5].
-- [cite_start]🎯 Bridging the gap between commercial strategy and technical execution[cite: 6].
+## About Me
+- Currently pursuing a **Master of Software Engineering** at Yoobee College of Creative Innovation.
+- **Full Stack Developer (Internship)** at Crockers Property Group (Park Tower Booking).
+- **Electrical Engineer** with an **MBA in Project Management**.
+- Visa Status: Valid until March 31, 2027 (Open for work opportunities in NZ).
+- Bridging the gap between commercial strategy and technical execution.
 
-## 🛠️ Technical Skills
-- **Languages:** Python (Flask, Django), SQL.
-- **Specialized:** Quantum Computing (Qiskit, Cirq), Grover’s and Shor’s algorithms.
-- [cite_start]**Commercial:** Salesforce CRM, Revenue Forecasting, Project Lifecycle Management[cite: 8, 11].
-- [cite_start]**Languages:** English (Fluent), Portuguese (Fluent), Spanish (Capable)[cite: 13].
+## Technical Skills
+- **Languages / Web:** Python (Flask, Django), JavaScript, SQL / Azure SQL.
+- **Cloud & Delivery:** Azure App Service, Easy Auth, GitHub Actions.
+- **Data / ML:** pandas, scikit-learn, seaborn.
+- **Specialized:** Quantum Computing (Qiskit), introductory quantum algorithms.
+- **Commercial:** Salesforce CRM, Revenue Forecasting, Project Lifecycle Management.
+- **Languages:** English (Fluent), Portuguese (Fluent), Spanish (Capable).
 
-## 📂 Key Projects
-### [CV Analyzer System]
-*A tool developed to streamline recruitment processes using automated data analysis.*
+## Key Projects
+### Park Tower Booking
+*Internal full-stack Flask tool for Crockers staff managing Park Tower short stays (availability, pipeline, cleaning, conflicts) on Azure.*
 
-### [Personalized Diet Suggestion App]
-*Application designed to provide customized nutritional recommendations based on user profiles.*
+### Yoobee Car Rental System
+*Python OOP rental system built for MSE-800 (Professional Software Engineering).*
 
-### [Hierarchical Quantum Architecture Search]
-*Research project focusing on Variational Quantum Algorithms.*
+### CV Analyzer System
+*LLM-assisted CV review tool focused on NZ tech hiring standards (MSE-800).*
 
-## 💼 Professional Experience
-- **agilon Health - Mphrx** | [cite_start]Sales Operations and Operational Manager (2021 - 2025)[cite: 15].
-- **China Telecom** | [cite_start]Senior Account Manager (2020 - 2021)[cite: 22].
-- **CenturyLink** | [cite_start]Senior Account Manager (2019 - 2020)[cite: 28].
+### Personalized Diet Suggestion App
+*Django app generating BMI-aware nutritional plans via structured LLM prompts (MSE-800).*
 
-## 📫 Contact & Socials
-- **LinkedIn:** [linkedin.com/in/andrebenedetti/](https://www.linkedin.com/in/andrebenedetti/)
+### Fitness App Data Analysis
+*Regression, clustering, and demographic bias analysis on fitness-app data (MSE-803).*
+
+### Quantum Computing Lab
+*Qiskit circuits, linear algebra foundations, and Deutsch–Jozsa (MSE-802).*
+
+## Professional Experience
+- **Crockers Property Group** | Full Stack Developer — Internship (2026 - Present).
+- **agilon Health** | Sales Operations and Operational Manager (2021 - 2025).
+- **China Telecom** | Senior Account Manager (2020 - 2021).
+- **CenturyLink** | Senior Account Manager (2019 - 2020).
+
+## Contact & Socials
+- **LinkedIn:** [linkedin.com/in/andre-luiz-santos-benedetti/](https://www.linkedin.com/in/andre-luiz-santos-benedetti/)
 - **Email:** andbene@gmail.com
-- [cite_start]**Location:** Auckland CBD, New Zealand[cite: 2].
+- **Location:** Auckland CBD, New Zealand.
 
 ---
 *Built with HTML, CSS, and Bootstrap.*
