@@ -88,6 +88,24 @@ def build():
     pdf.set_font("Body", "I", 10)
     pdf.cell(0, 4.3, "Mobile Phone: +64 22 523 3453", new_x="LMARGIN", new_y="NEXT")
     pdf.cell(0, 4.3, "E-mail: andbene@gmail.com", new_x="LMARGIN", new_y="NEXT")
+    pdf.set_x(pdf.l_margin)
+    pdf.cell(
+        0,
+        4.3,
+        "Portfolio: https://andre-benedetti.github.io/Andre-Portfolio/",
+        new_x="LMARGIN",
+        new_y="NEXT",
+        link="https://andre-benedetti.github.io/Andre-Portfolio/",
+    )
+    pdf.set_x(pdf.l_margin)
+    pdf.cell(
+        0,
+        4.3,
+        "LinkedIn: https://www.linkedin.com/in/andre-luiz-santos-benedetti/",
+        new_x="LMARGIN",
+        new_y="NEXT",
+        link="https://www.linkedin.com/in/andre-luiz-santos-benedetti/",
+    )
     pdf.cell(0, 4.3, "Auckland CBD", new_x="LMARGIN", new_y="NEXT")
 
     pdf.section("EXECUTIVE SUMMARY")
