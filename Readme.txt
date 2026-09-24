@@ -29,7 +29,7 @@ Professional portfolio showcasing the transition from a background in **Electric
 *MSE-800 team project — multi-tenant community wellbeing platform. Backend Developer (Node.js/Express, MongoDB, JWT). Live: https://whanauwell.onrender.com/*
 
 ### Yoobee Car Rental System
-*Python OOP rental system built for MSE-800 (Professional Software Engineering).*
+*Python CLI rental system (SQLite, OOP roles, booking/approval flows) — MSE-800 Assessment 1. Repo: https://github.com/Andre-Benedetti/MSE_800_Assessment_1*
 
 ### CV Analyzer System
 *LLM-assisted CV review tool focused on NZ tech hiring standards (MSE-800).*
