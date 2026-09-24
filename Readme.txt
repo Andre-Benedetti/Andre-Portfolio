@@ -26,7 +26,7 @@ Professional portfolio showcasing the transition from a background in **Electric
 *Production MVP for bus operations reporting (Expo/React Native + Supabase + Vercel). Demo: https://gatisync.vercel.app*
 
 ### WhānauWell
-*MSE-800 team project — multi-tenant community wellbeing platform. Backend Developer (Node.js/Express, MongoDB, JWT). Live: https://whanauwell.onrender.com/*
+*MSE-800 Assessment 2 · Yoobee College of Creative Innovation — multi-tenant community wellbeing platform. Backend Developer (Node.js/Express, MongoDB, JWT). Live: https://whanauwell.onrender.com/*
 
 ### Yoobee Car Rental System
 *Python CLI rental system (SQLite, OOP roles, booking/approval flows) — MSE-800 Assessment 1. Repo: https://github.com/Andre-Benedetti/MSE_800_Assessment_1*
