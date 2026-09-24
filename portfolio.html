@@ -210,35 +210,38 @@
   <div class="project-card bg-white border border-2 mb-5 shadow-sm">
     <div class="row g-0">
       <div class="col-lg-7 p-4 p-md-5">
-        <p class="text-muted small text-uppercase mb-1">MSE-800 · Yoobee</p>
+        <p class="text-muted small text-uppercase mb-1">MSE-800 · Yoobee · Assessment 1</p>
         <h3 class="fw-bold text-uppercase mb-3">Yoobee Car Rental System</h3>
         
         <p class="text-justify mb-4">
-          Developed as the core project for the <strong>Professional Software Engineering (MSE800)</strong> course. This Python-based application automates vehicle rental operations, managing everything from inventory to role-based user access.
+          Python CLI application that automates vehicle rental operations with SQLite persistence and role-based access (Customer, Admin, Master). Built as Assessment 1 for <strong>Professional Software Engineering (MSE-800)</strong> at Yoobee, applying OOP principles including inheritance, polymorphism, and encapsulation.
         </p>
 
         <div class="mb-4">
           <h5 class="fw-bold text-uppercase small border-bottom pb-2 mb-3">Tools & Technologies</h5>
           <div class="d-flex flex-wrap gap-2">
             <span class="badge bg-dark rounded-0 px-3 py-2">Python</span>
-            <span class="badge bg-dark rounded-0 px-3 py-2">VS Code</span>
-            <span class="badge bg-dark rounded-0 px-3 py-2">Miro</span>
+            <span class="badge bg-dark rounded-0 px-3 py-2">SQLite</span>
+            <span class="badge bg-dark rounded-0 px-3 py-2">OOP</span>
+            <span class="badge bg-dark rounded-0 px-3 py-2">CLI</span>
+            <span class="badge bg-dark rounded-0 px-3 py-2">PyInstaller</span>
             <span class="badge bg-dark rounded-0 px-3 py-2">GitHub</span>
-            <span class="badge bg-dark rounded-0 px-3 py-2">SQL Integration</span>
           </div>
         </div>
 
         <div class="mb-4">
-          <h5 class="fw-bold text-uppercase small border-bottom pb-2 mb-3">OOP & Architecture</h5>
+          <h5 class="fw-bold text-uppercase small border-bottom pb-2 mb-3">Highlights</h5>
           <ul class="list-unstyled small">
-            <li class="mb-2"><i class="bi bi-cpu me-2"></i><strong>Singleton Pattern:</strong> Ensures a single data instance for consistency.</li>
-            <li class="mb-2"><i class="bi bi-layers me-2"></i><strong>Layered Design:</strong> Separation of Data, Domain, and Application layers.</li>
-            <li><i class="bi bi-shield-lock me-2"></i><strong>Encapsulation:</strong> Secured internal states for Users and Vehicles.</li>
+            <li class="mb-2"><i class="bi bi-people me-2"></i><strong>User management:</strong> Register/login with Customer, Admin, and Master roles.</li>
+            <li class="mb-2"><i class="bi bi-car-front me-2"></i><strong>Fleet management:</strong> Admins add, update (mileage/rate), and delete vehicles.</li>
+            <li class="mb-2"><i class="bi bi-calendar2-check me-2"></i><strong>Booking flow:</strong> Customers view cars, calculate fees (including delivery), and request bookings.</li>
+            <li class="mb-2"><i class="bi bi-shield-check me-2"></i><strong>Approvals:</strong> Master approves Admin accounts; Admins confirm/reject reservations; Master can delete accounts.</li>
+            <li><i class="bi bi-diagram-3 me-2"></i><strong>Architecture:</strong> User base class with Customer/Admin polymorphism; RentalSystem engine for DB and business logic.</li>
           </ul>
         </div>
 
         <p class="text-muted small italic m-0">
-          * Source code and full documentation are available upon request.
+          * Source: <a href="https://github.com/Andre-Benedetti/MSE_800_Assessment_1" target="_blank" class="text-dark">MSE_800_Assessment_1</a> (documentation &amp; UML included).
         </p>
       </div>
 
