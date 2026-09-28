@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Generate Andre Benedetti CV PDF (max 2 pages)."""
+"""Generate Andre Benedetti CV PDF (max 2 pages) and optional application pack with cover letter."""
 
 from pathlib import Path
 
 from fpdf import FPDF
 
-OUT = Path(__file__).resolve().parents[1] / "assets" / "pdf" / "Andre Benedetti CV.pdf"
+ROOT = Path(__file__).resolve().parents[1]
+OUT_CV = ROOT / "assets" / "pdf" / "Andre Benedetti CV.pdf"
+OUT_HOWDEN = ROOT / "assets" / "pdf" / "Andre Benedetti CV Howden.pdf"
 FONT_REG = "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"
 FONT_BOLD = "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"
 FONT_ITALIC = "/usr/share/fonts/truetype/liberation/LiberationSans-Italic.ttf"
@@ -77,9 +79,84 @@ class CV(FPDF):
             self.write(4.1, title)
         self.ln(4.6)
 
+    def para(self, text: str, size=10.5, leading=5.2):
+        self.set_font("Body", "", size)
+        self.set_x(self.l_margin)
+        self.multi_cell(self.epw, leading, text)
+        self.ln(3.2)
 
-def build():
-    pdf = CV()
+
+def write_howden_cover(pdf: CV):
+    """One-page cover letter for Howden Junior Software Engineer."""
+    pdf.add_page()
+
+    pdf.set_font("Body", "BI", 14)
+    pdf.cell(0, 6.5, "Andre Luiz Santos Benedetti", new_x="LMARGIN", new_y="NEXT")
+    pdf.set_font("Body", "I", 10)
+    pdf.cell(0, 4.3, "Auckland CBD · +64 22 523 3453 · andbene@gmail.com", new_x="LMARGIN", new_y="NEXT")
+    pdf.set_x(pdf.l_margin)
+    pdf.cell(
+        0,
+        4.3,
+        "Portfolio: https://andre-benedetti.github.io/Andre-Portfolio/",
+        new_x="LMARGIN",
+        new_y="NEXT",
+        link="https://andre-benedetti.github.io/Andre-Portfolio/",
+    )
+    pdf.set_x(pdf.l_margin)
+    pdf.cell(
+        0,
+        4.3,
+        "LinkedIn: https://www.linkedin.com/in/andre-luiz-santos-benedetti/",
+        new_x="LMARGIN",
+        new_y="NEXT",
+        link="https://www.linkedin.com/in/andre-luiz-santos-benedetti/",
+    )
+    pdf.ln(6)
+
+    pdf.set_font("Body", "", 10.5)
+    pdf.cell(0, 5.2, "Hiring Team", new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(0, 5.2, "Howden Pacific", new_x="LMARGIN", new_y="NEXT")
+    pdf.ln(2)
+    pdf.set_font("Body", "B", 10.5)
+    pdf.multi_cell(pdf.epw, 5.2, "Re: Junior Software Engineer — Howden Bridge")
+    pdf.ln(4)
+
+    pdf.para(
+        "I am writing to apply for the Junior Software Engineer role supporting Howden Bridge. "
+        "I am looking for a place to grow as an engineer on a real digital product, with mentoring "
+        "from an experienced technology team—and Howden’s People First culture is a strong fit for how I like to work."
+    )
+    pdf.para(
+        "I am transitioning into software engineering while completing a Master of Software Engineering "
+        "at Yoobee College of Creative Innovation in Auckland. Most recently, as Developer Intern at "
+        "Crockers Property Group, I designed and built Park Tower Booking—an internal full-stack Flask "
+        "application on Azure SQL and Azure App Service—covering availability search, booking workflows, "
+        "operational tracking, REST/API integration, and CI/CD. I also build and ship personal and course "
+        "projects involving web apps, APIs, and databases (including Node/Express and cloud-hosted demos)."
+    )
+    pdf.para(
+        "Before this transition I led commercial and operational work in technical environments, including "
+        "as Sales Operations and Operational Manager at agilon Health. That background strengthens how I "
+        "read business requirements, communicate with stakeholders, and turn practical problems into "
+        "workable solutions—skills I want to bring to Howden Bridge enhancements, integrations, defect "
+        "investigation, and release activities."
+    )
+    pdf.para(
+        "I would welcome the opportunity to contribute to Howden Bridge, learn your standards and "
+        "insurance domain, and grow my engineering craft inside a collaborative Broking Operations team. "
+        "Thank you for your consideration—I look forward to hearing from you."
+    )
+
+    pdf.ln(2)
+    pdf.set_font("Body", "", 10.5)
+    pdf.cell(0, 5.2, "Kind regards,", new_x="LMARGIN", new_y="NEXT")
+    pdf.ln(4)
+    pdf.set_font("Body", "B", 10.5)
+    pdf.cell(0, 5.2, "Andre Benedetti", new_x="LMARGIN", new_y="NEXT")
+
+
+def write_cv_pages(pdf: CV):
     pdf.add_page()
 
     # Header
@@ -287,12 +364,34 @@ def build():
         pdf.set_font("Body", "I", 9.3)
         pdf.multi_cell(pdf.epw, 4.2, e)
 
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    pdf.output(str(OUT))
-    print(f"Wrote {OUT} pages={pdf.page_no()}")
+
+def build():
+    pdf = CV()
+    write_cv_pages(pdf)
+    OUT_CV.parent.mkdir(parents=True, exist_ok=True)
+    pdf.output(str(OUT_CV))
+    print(f"Wrote {OUT_CV} pages={pdf.page_no()}")
     if pdf.page_no() > 2:
         raise SystemExit(f"ERROR: CV has {pdf.page_no()} pages; must be <= 2")
 
 
+def build_howden_pack():
+    """Cover letter (page 1) + CV (pages 2–3) for Howden Junior Software Engineer."""
+    pdf = CV()
+    write_howden_cover(pdf)
+    cover_pages = pdf.page_no()
+    if cover_pages != 1:
+        raise SystemExit(f"ERROR: cover letter has {cover_pages} pages; must be 1")
+
+    write_cv_pages(pdf)
+    OUT_HOWDEN.parent.mkdir(parents=True, exist_ok=True)
+    pdf.output(str(OUT_HOWDEN))
+    cv_pages = pdf.page_no() - cover_pages
+    print(f"Wrote {OUT_HOWDEN} pages={pdf.page_no()} (cover={cover_pages}, cv={cv_pages})")
+    if cv_pages > 2:
+        raise SystemExit(f"ERROR: CV section has {cv_pages} pages; must be <= 2")
+
+
 if __name__ == "__main__":
     build()
+    build_howden_pack()
