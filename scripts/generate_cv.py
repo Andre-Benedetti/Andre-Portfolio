@@ -101,10 +101,10 @@ def build():
     pdf.cell(
         0,
         4.3,
-        "LinkedIn: https://www.linkedin.com/in/andre-luiz-santos-benedetti/",
+        "LinkedIn: https://www.linkedin.com/in/andrebenedetti/",
         new_x="LMARGIN",
         new_y="NEXT",
-        link="https://www.linkedin.com/in/andre-luiz-santos-benedetti/",
+        link="https://www.linkedin.com/in/andrebenedetti/",
     )
     pdf.cell(0, 4.3, "Auckland CBD", new_x="LMARGIN", new_y="NEXT")
 
