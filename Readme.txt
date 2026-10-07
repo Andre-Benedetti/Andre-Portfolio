@@ -50,7 +50,7 @@ Professional portfolio showcasing the transition from a background in **Electric
 - **CenturyLink** | Senior Account Manager (2019 - 2020).
 
 ## Contact & Socials
-- **LinkedIn:** [linkedin.com/in/andre-luiz-santos-benedetti/](https://www.linkedin.com/in/andre-luiz-santos-benedetti/)
+- **LinkedIn:** [linkedin.com/in/andrebenedetti/](https://www.linkedin.com/in/andrebenedetti/)
 - **Email:** andbene@gmail.com
 - **Location:** Auckland CBD, New Zealand.
 
