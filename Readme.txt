@@ -23,7 +23,7 @@ Professional portfolio showcasing the transition from a background in **Electric
 *Internal full-stack Flask tool for Crockers staff managing Park Tower short stays (availability, pipeline, cleaning, conflicts) on Azure.*
 
 ### Gati Sync
-*Production MVP for bus operations reporting (Expo/React Native + Supabase + Vercel). Demo: https://gatisync.vercel.app*
+*Client Project · Production MVP for bus operations (Expo/React Native + Supabase + Vercel + Leaflet; EN/PT + live GPS map). Sole builder. Demo: https://gatisync.vercel.app*
 
 ### WhānauWell
 *MSE-800 Assessment 2 · Yoobee College of Creative Innovation — multi-tenant community wellbeing platform. Backend Developer (Node.js/Express, MongoDB, JWT). Live: https://whanauwell.onrender.com/*
