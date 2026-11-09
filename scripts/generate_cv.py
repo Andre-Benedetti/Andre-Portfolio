@@ -92,10 +92,10 @@ def build():
     pdf.cell(
         0,
         4.3,
-        "Portfolio: https://andre-benedetti.github.io/Andre-Portfolio/",
+        "Portfolio: https://andre-benedetti.github.io/Andre-Portfolio/index.html",
         new_x="LMARGIN",
         new_y="NEXT",
-        link="https://andre-benedetti.github.io/Andre-Portfolio/",
+        link="https://andre-benedetti.github.io/Andre-Portfolio/index.html",
     )
     pdf.set_x(pdf.l_margin)
     pdf.cell(
@@ -112,10 +112,10 @@ def build():
     pdf.body(
         "Transitioning into technology to bridge business operations and technical delivery. "
         "Electrical Engineer with an MBA in Project Management and experience leading operational, "
-        "implementation, and contract-management work in technical environments; currently pursuing "
-        "a Master of Software Engineering at Yoobee College of Creative Innovation (Auckland, NZ). "
-        "Most recently Developer Intern at Crockers Property Group, delivering Park Tower Booking—"
-        "a full-stack Flask application on Azure—built with Cursor.",
+        "implementation, and contract-management work in technical environments; recently completed "
+        "a Master of Software Engineering at Yoobee College of Creative Innovation (Auckland, NZ; "
+        "formal graduation pending). Most recently Developer Intern at Crockers Property Group, "
+        "delivering Park Tower Booking—a full-stack Flask application on Azure—built with Cursor.",
         style="I",
     )
 
@@ -277,7 +277,7 @@ def build():
 
     pdf.section("EDUCATION")
     edu = [
-        "2026 — Master of Software Engineering — Yoobee College of Creative Innovation, Auckland, New Zealand",
+        "2026 — Master of Software Engineering (coursework completed; formal graduation pending) — Yoobee College of Creative Innovation, Auckland, New Zealand",
         "2015 — SPIN Selling — Huthwaite, Sao Paulo, Brazil",
         "2013 — MBA in Project Management — INPG, Blumenau, SC, Brazil",
         "2005 — B.S. in Electrical Engineering (Industrial Engineering qualification) — Federal University of Santa Catarina, Florianopolis, SC, Brazil",
