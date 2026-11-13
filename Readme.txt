@@ -20,7 +20,7 @@ Professional portfolio showcasing the transition from a background in **Electric
 
 ## Key Projects
 ### Park Tower Booking
-*Internal full-stack Flask tool for Crockers staff managing Park Tower short stays (availability, pipeline, cleaning, conflicts) on Azure.*
+*Internal full-stack Flask tool for Crockers staff managing Park Tower short stays (availability, pipeline, cleaning, conflicts) on Azure. Also the MSE-907 capstone case study on LLM-assisted development (final report 92%). Report: assets/pdf/MSE907-Capstone-Park-Tower-LLMs-in-Practice.pdf*
 
 ### Gati Sync
 *Client Project · Production MVP for bus operations (Expo/React Native + Supabase + Vercel + Leaflet; EN/PT + live GPS map). Sole builder. Demo: https://gatisync.vercel.app*
